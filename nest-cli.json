@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/crypto-wallet/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/crypto-wallet/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/crypto-wallet",
+  "projects": {
+    "crypto-wallet": {
+      "type": "application",
+      "root": "apps/crypto-wallet",
+      "entryFile": "main",
+      "sourceRoot": "apps/crypto-wallet/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/crypto-wallet/tsconfig.app.json"
+      }
+    },
+    "crypto-worker": {
+      "type": "application",
+      "root": "apps/crypto-worker",
+      "entryFile": "main",
+      "sourceRoot": "apps/crypto-worker/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/crypto-worker/tsconfig.app.json"
+      }
+    },
+    "shared-contracts": {
+      "type": "library",
+      "root": "libs/shared-contracts",
+      "entryFile": "index",
+      "sourceRoot": "libs/shared-contracts/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/shared-contracts/tsconfig.lib.json"
+      }
+    }
+  }
+}
