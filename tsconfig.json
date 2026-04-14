@@ -20,12 +20,21 @@
     "noImplicitAny": false,
     "strictBindCallApply": false,
     "noFallthroughCasesInSwitch": false,
+    
+    "baseUrl": "./",
+
     "paths": {
       "@app/shared-contracts": [
-        "./libs/shared-contracts/src"
+        "libs/shared-contracts/src"
       ],
       "@app/shared-contracts/*": [
-        "./libs/shared-contracts/src/*"
+        "libs/shared-contracts/src/*"
+      ],
+      "@app/database": [
+        "libs/database/src"
+      ],
+      "@app/database/*": [
+        "libs/database/src/*"
       ]
     }
   }
